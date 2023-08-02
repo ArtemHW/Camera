@@ -163,9 +163,9 @@ void OV2640_Configuration(const unsigned char arr[][2]) {
 		}
 		HAL_StatusTypeDef result = 4;
 		HAL_I2C_DeInit(&hi2c1);
-		HAL_Delay(10);
+		HAL_Delay(20);
 		HAL_I2C_Init(&hi2c1);
-		HAL_Delay(10);
+		HAL_Delay(25);
 		//SCCB_Read(reg_addr, &data_read);
 //		data_to_send = reg_addr;
 //		__disable_irq();
@@ -183,13 +183,13 @@ void OV2640_Configuration(const unsigned char arr[][2]) {
 			result = HAL_I2C_Master_Transmit(&hi2c1, CAMERA_ADDRESS_WRITE, &data_to_send2, 2, 1000);
 			if(result != HAL_OK){
 				HAL_I2C_DeInit(&hi2c1);
-				HAL_Delay(10);
+				HAL_Delay(40);
 				HAL_I2C_Init(&hi2c1);
-				HAL_Delay(10);
+				HAL_Delay(40);
 			}
 		} while(result != HAL_OK);
 		//__enable_irq();
-		HAL_Delay(10);
+		HAL_Delay(100);
 		//SCCB_Read(reg_addr, &data_read);
 		data_to_send = reg_addr;
 		result = 4;
@@ -198,9 +198,9 @@ void OV2640_Configuration(const unsigned char arr[][2]) {
 			result = HAL_I2C_Master_Transmit(&hi2c1, CAMERA_ADDRESS_WRITE, &data_to_send, 1, 1000);
 			if(result != HAL_OK){
 				HAL_I2C_DeInit(&hi2c1);
-				HAL_Delay(10);
+				HAL_Delay(40);
 				HAL_I2C_Init(&hi2c1);
-				HAL_Delay(10);
+				HAL_Delay(40);
 			}
 		}while(result != HAL_OK);
 		result = 4;
@@ -208,9 +208,9 @@ void OV2640_Configuration(const unsigned char arr[][2]) {
 			result = HAL_I2C_Master_Receive(&hi2c1, CAMERA_ADDRESS_READ, &data_read, 1, 1000);
 			if(result != HAL_OK){
 				HAL_I2C_DeInit(&hi2c1);
-				HAL_Delay(10);
+				HAL_Delay(40);
 				HAL_I2C_Init(&hi2c1);
-				HAL_Delay(10);
+				HAL_Delay(40);
 			}
 		}while(result != HAL_OK);
 		//__enable_irq();

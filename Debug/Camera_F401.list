@@ -517,14 +517,14 @@ void OV2640_Configuration(const unsigned char arr[][2]) {
 		HAL_I2C_DeInit(&hi2c1);
  80005ea:	4843      	ldr	r0, [pc, #268]	; (80006f8 <OV2640_Configuration+0x148>)
  80005ec:	f001 f9ae 	bl	800194c <HAL_I2C_DeInit>
-		HAL_Delay(10);
- 80005f0:	200a      	movs	r0, #10
+		HAL_Delay(20);
+ 80005f0:	2014      	movs	r0, #20
  80005f2:	f000 fcdf 	bl	8000fb4 <HAL_Delay>
 		HAL_I2C_Init(&hi2c1);
  80005f6:	4840      	ldr	r0, [pc, #256]	; (80006f8 <OV2640_Configuration+0x148>)
  80005f8:	f001 f864 	bl	80016c4 <HAL_I2C_Init>
-		HAL_Delay(10);
- 80005fc:	200a      	movs	r0, #10
+		HAL_Delay(25);
+ 80005fc:	2019      	movs	r0, #25
  80005fe:	f000 fcd9 	bl	8000fb4 <HAL_Delay>
 //		HAL_Delay(10);
 		//SCCB_Write(reg_addr, data);
@@ -557,14 +557,14 @@ void OV2640_Configuration(const unsigned char arr[][2]) {
 				HAL_I2C_DeInit(&hi2c1);
  800062c:	4832      	ldr	r0, [pc, #200]	; (80006f8 <OV2640_Configuration+0x148>)
  800062e:	f001 f98d 	bl	800194c <HAL_I2C_DeInit>
-				HAL_Delay(10);
- 8000632:	200a      	movs	r0, #10
+				HAL_Delay(40);
+ 8000632:	2028      	movs	r0, #40	; 0x28
  8000634:	f000 fcbe 	bl	8000fb4 <HAL_Delay>
 				HAL_I2C_Init(&hi2c1);
  8000638:	482f      	ldr	r0, [pc, #188]	; (80006f8 <OV2640_Configuration+0x148>)
  800063a:	f001 f843 	bl	80016c4 <HAL_I2C_Init>
-				HAL_Delay(10);
- 800063e:	200a      	movs	r0, #10
+				HAL_Delay(40);
+ 800063e:	2028      	movs	r0, #40	; 0x28
  8000640:	f000 fcb8 	bl	8000fb4 <HAL_Delay>
 			}
 		} while(result != HAL_OK);
@@ -572,8 +572,8 @@ void OV2640_Configuration(const unsigned char arr[][2]) {
  8000646:	2b00      	cmp	r3, #0
  8000648:	d1e1      	bne.n	800060e <OV2640_Configuration+0x5e>
 		//__enable_irq();
-		HAL_Delay(10);
- 800064a:	200a      	movs	r0, #10
+		HAL_Delay(100);
+ 800064a:	2064      	movs	r0, #100	; 0x64
  800064c:	f000 fcb2 	bl	8000fb4 <HAL_Delay>
 		//SCCB_Read(reg_addr, &data_read);
 		data_to_send = reg_addr;
@@ -601,14 +601,14 @@ void OV2640_Configuration(const unsigned char arr[][2]) {
 				HAL_I2C_DeInit(&hi2c1);
  8000676:	4820      	ldr	r0, [pc, #128]	; (80006f8 <OV2640_Configuration+0x148>)
  8000678:	f001 f968 	bl	800194c <HAL_I2C_DeInit>
-				HAL_Delay(10);
- 800067c:	200a      	movs	r0, #10
+				HAL_Delay(40);
+ 800067c:	2028      	movs	r0, #40	; 0x28
  800067e:	f000 fc99 	bl	8000fb4 <HAL_Delay>
 				HAL_I2C_Init(&hi2c1);
  8000682:	481d      	ldr	r0, [pc, #116]	; (80006f8 <OV2640_Configuration+0x148>)
  8000684:	f001 f81e 	bl	80016c4 <HAL_I2C_Init>
-				HAL_Delay(10);
- 8000688:	200a      	movs	r0, #10
+				HAL_Delay(40);
+ 8000688:	2028      	movs	r0, #40	; 0x28
  800068a:	f000 fc93 	bl	8000fb4 <HAL_Delay>
 			}
 		}while(result != HAL_OK);
@@ -636,14 +636,14 @@ void OV2640_Configuration(const unsigned char arr[][2]) {
 				HAL_I2C_DeInit(&hi2c1);
  80006b6:	4810      	ldr	r0, [pc, #64]	; (80006f8 <OV2640_Configuration+0x148>)
  80006b8:	f001 f948 	bl	800194c <HAL_I2C_DeInit>
-				HAL_Delay(10);
- 80006bc:	200a      	movs	r0, #10
+				HAL_Delay(40);
+ 80006bc:	2028      	movs	r0, #40	; 0x28
  80006be:	f000 fc79 	bl	8000fb4 <HAL_Delay>
 				HAL_I2C_Init(&hi2c1);
  80006c2:	480d      	ldr	r0, [pc, #52]	; (80006f8 <OV2640_Configuration+0x148>)
  80006c4:	f000 fffe 	bl	80016c4 <HAL_I2C_Init>
-				HAL_Delay(10);
- 80006c8:	200a      	movs	r0, #10
+				HAL_Delay(40);
+ 80006c8:	2028      	movs	r0, #40	; 0x28
  80006ca:	f000 fc73 	bl	8000fb4 <HAL_Delay>
 			}
 		}while(result != HAL_OK);
